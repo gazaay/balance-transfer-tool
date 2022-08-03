@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useTheme } from '@mui/material/styles';
-import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
+// import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from './Title';
-import { Button, Input, Slider, TextField } from '@mui/material';
+import { Slider, TextField } from '@mui/material';
 import PropTypes from 'prop-types';
 
 import NumberFormat from 'react-number-format';

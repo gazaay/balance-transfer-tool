@@ -2,19 +2,19 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Title from './Title';
 import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField } from '@mui/material';
-import { loan_term, selectLoanValue } from './features/loanSlice'
+import { selectLoanValue } from './features/loanSlice'
 
 import { useSelector } from 'react-redux';
 import NumberFormat from 'react-number-format';
 import PropTypes from 'prop-types';
 
-import calculateMortgage from 'mortgage-calculator/lib/calculate_mortgage';
-import { loanCalculator } from 'loan-calculator-js';
+// import calculateMortgage from 'mortgage-calculator/lib/calculate_mortgage';
+// import { loanCalculator } from 'loan-calculator-js';
 import {loanMonthlyPayment, loanPaymentToIncome, netIncomeBalance, totalInterest} from 'cashmoneyloan';
 
-function preventDefault(event) {
-  event.preventDefault();
-}
+// function preventDefault(event) {
+//   event.preventDefault();
+// }
 
 function createData(title, data) {
   return { title, data };

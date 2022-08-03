@@ -18,11 +18,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
-import Chart from './Chart';
-import Deposits from './Deposits';
-import Orders from './Orders';
+// import Chart from './Chart';
+// import Deposits from './Deposits';
+// import Orders from './Orders';
 import CurrentLoan from './CurrentLoan';
-import { Calculate } from '@mui/icons-material';
+// import { Calculate } from '@mui/icons-material';
 import Calculator from './Calculator';
 import CreditProposal from './CreditProposal';
 
