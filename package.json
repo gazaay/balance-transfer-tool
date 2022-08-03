@@ -14,6 +14,7 @@
     "cashmoneyloan": "^1.1.1",
     "loan-calculator-js": "^0.0.9",
     "mortgage-calculator": "^1.1.2",
+    "node": "^18.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-number-format": "^4.9.3",
