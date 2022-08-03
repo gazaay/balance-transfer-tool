@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 
 // import calculateMortgage from 'mortgage-calculator/lib/calculate_mortgage';
 // import { loanCalculator } from 'loan-calculator-js';
-import {loanMonthlyPayment, loanPaymentToIncome, netIncomeBalance, totalInterest} from 'cashmoneyloan';
+import {loanMonthlyPayment, totalInterest} from 'cashmoneyloan';
 
 // function preventDefault(event) {
 //   event.preventDefault();
@@ -55,24 +55,30 @@ NumberFormatCustom.propTypes = {
 export default function CreditProposal() {
   const loan_value = useSelector(selectLoanValue);
 
-  const income = 5000;
+  // const income = 5000;
   const loanAmount =  loan_value.amount ;
   const monthlyLoanPeriod = loan_value.loanterms;
   const interestRate = loan_value.interestrate ;
 
   
   const monthlyLoanInstalment = loanMonthlyPayment(loanAmount,monthlyLoanPeriod,interestRate);
-  const paymentToIncomeRatio = loanPaymentToIncome(monthlyLoanInstalment, income);
-  const IncomeBalance = netIncomeBalance(income, monthlyLoanInstalment);
+  // const paymentToIncomeRatio = loanPaymentToIncome(monthlyLoanInstalment, income);
+  // const IncomeBalance = netIncomeBalance(income, monthlyLoanInstalment);
 
 const my_totalInterest = totalInterest(monthlyLoanInstalment, monthlyLoanPeriod, loanAmount);
 
+// const formatter = NumberFormat.getCurrencyInstance();
+  
+  // expected output: "1,23,000"
+  
+
   const rows = [
-    createData('Loan Amount', loanAmount),
-    createData('Interest rate', interestRate),
+    createData('Loan Amount', '$' + Intl.NumberFormat('en-IN',  { maximumSignificantDigits: 2 }).format(loanAmount)),
+    createData('Interest rate', interestRate + '%'),
     createData('Loan term', monthlyLoanPeriod),
-    createData('Total Interest', my_totalInterest),
+    createData('Total Interest', '$' +  Intl.NumberFormat('en-IN',  { maximumSignificantDigits: 2 }).format(my_totalInterest)),
   ];
+
 
 
   return (
